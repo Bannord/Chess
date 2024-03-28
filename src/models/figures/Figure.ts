@@ -3,6 +3,8 @@ import logo from '../../assets/black-bishop.png'
 import { Cell } from "../Cell";
 
 
+
+
 export enum FigureNames {
     FIGURE = 'Фигура',
     KING = 'Король',
@@ -32,11 +34,29 @@ export class Figure {
     }
 
     canMove(target: Cell) : boolean {
-        return true;
+        if(target.figure?.color === this.color) {
+            return false
+        }
+
+        
+
+        if (target.figure?.name === FigureNames.KING) {
+            return false
+        }
+        else {
+            return true
+        }
     }
 
     moveFigure(target: Cell) {
         
     }
+
+    // isKing(figure: Figure) : boolean {
+    //     if (figure === Figure.name.KING) {
+    //         return true
+    //     }
+    //     return false
+    // }
 }
 
