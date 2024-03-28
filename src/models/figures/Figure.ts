@@ -41,7 +41,7 @@ export class Figure {
         
 
         if (target.figure?.name === FigureNames.KING) {
-            return false
+            return true
         }
         else {
             return true
@@ -52,11 +52,11 @@ export class Figure {
         
     }
 
-    // isKing(figure: Figure) : boolean {
-    //     if (figure === Figure.name.KING) {
-    //         return true
-    //     }
-    //     return false
-    // }
+     isKing(target: Cell) : boolean {
+         if (target.figure?.name === FigureNames.KING) {
+            target.figure = null
+         }
+         return false
+     }
 }
 
