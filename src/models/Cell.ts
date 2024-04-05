@@ -85,9 +85,6 @@ export class Cell {
 
     }
 
-    // IsKIngUnderAtack(target: Cell) {
-    //     if (this.board.)
-    // }
     
 
     setFigure(figure: Figure) {
@@ -101,9 +98,11 @@ export class Cell {
         : this.board.lostWhiteFigures.push(figure)
         
     }
+
+   
     // this.figure && this.figure.canMove(target) && (!target.figure || target.figure.color !== this.figure.color || target.figure.isKing()))
     moveFigure(target: Cell) {
-    if (this.figure && this.figure.canMove(target) && (!target.figure || target.figure.color !== this.figure.color || target.figure.isKing(target))) {
+        if (this.figure && this.figure.canMove(target) && (!target.figure || target.figure.color !== this.figure.color || target.figure.name === FigureNames.KING)) {
         this.figure.moveFigure(target);
         if (target.figure) {
             this.addLostFigure(target.figure);

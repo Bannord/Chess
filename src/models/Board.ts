@@ -97,27 +97,7 @@ export class Board {
         this.addRooks()
     }
 
-    isKingUnderAttack(color: Colors): boolean {
-        // Находим короля определенного цвета
-        const kingCell = this.findKing(color);
-        if (!kingCell) {
-            return false; // Если король не найден, он не под атакой
-        }
-
-        // Проходим по всем клеткам доски
-        for (let x = 0; x < 8; x++) {
-            for (let y = 0; y < 8; y++) {
-                const currentCell = this.cells[x][y];
-                // Если на клетке есть фигура противоположного цвета,
-                // и она может съесть короля, то король находится под атакой
-                if (!currentCell.isEmpty() && currentCell.figure?.color !== color && currentCell.figure.canMove(kingCell)) {
-                    return true;
-                }
-            }
-        }
-
-        return false; // Если ни одна фигура не может съесть короля, он не под атакой
-    }
+   
 
    
 }

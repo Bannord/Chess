@@ -23,12 +23,11 @@ export class King extends Figure {
             return false;
         }
     
-        // Проверка возможности хода на одну клетку в любом направлении
+       
         const deltaX = Math.abs(target.x - this.cell.x);
         const deltaY = Math.abs(target.y - this.cell.y);
     
         if ((deltaX <= 1) && (deltaY <= 1)) {
-            // Проверка, что на целевой клетке нет фигуры того же цвета
             if (this.cell.board.getCell(target.x, target.y).isEmpty() || !this.cell.isEnemy(target)) {
                 return true;
             }
@@ -36,4 +35,6 @@ export class King extends Figure {
     
       return false;
     }
+
+    
 }
