@@ -61,3 +61,30 @@
   margin-left: 50px;
   background-color: lightgray;
 }
+
+.main-wrapper-popup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.5);
+  display: flex; /* Добавляем flex для центрирования */
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /
+}
+
+.popUp_background {
+  background-color: white;
+  text-align: center;
+  width: 540px;
+}
+
+.popUp-content {
+  color: green;
+
+ 
+}
+h3 {
+  margin-bottom: 20px;
+}

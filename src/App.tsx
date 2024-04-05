@@ -1,4 +1,4 @@
-import {React, useState, useEffect} from 'react'
+import { useState, useEffect} from 'react'
 import './App.css'
 import BoardComponent from './components/BoardComponent'
 import { Board } from './models/Board'
@@ -12,6 +12,8 @@ function App() {
   const [whitePlayer, setWhitePlayer] = useState(new Player(Colors.WHITE))
   const [blackPlayer, setBlackPlayer] = useState(new Player(Colors.BLACK))
   const [currentPlayer, setCurrentPlayer] = useState<Player | null>(null)
+
+  console.log(setWhitePlayer, setBlackPlayer)
 
   useEffect(() =>{
     restart()

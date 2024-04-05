@@ -1,4 +1,4 @@
-import React, { FC, useState, useRef, useEffect } from "react";
+import  { FC, useState, useRef, useEffect } from "react";
 import { Player } from "../models/Player";
 import { Colors } from "../models/Colors";
 
